@@ -1,0 +1,22 @@
+.completed-tasks h1, .completed-tasks p{
+    margin: 0;
+    font-family: 'poppins',sans-serif; 
+    font-size: var(--xxlg);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center; 
+    color: var(--light-turquoise);
+    text-shadow: 1px 1px 3px black;
+}
+.completed-tasks p{
+    font-size: var(--md);
+}
+@media (max-width: 650px) {
+    .completed-tasks h1, .completed-tasks p{
+        font-size: var(--lg);
+    }
+    
+    .completed-tasks p {
+        font-size: var(--md);
+    }
+}

@@ -1,0 +1,122 @@
+.create-task{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: .5em;
+    box-shadow: 0 0px 3px rgb(255, 255, 255),
+                0 4px 30px rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.603);
+}
+.create-task form{
+    position: relative;
+    padding: 6em 5em;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+.create-task img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.create-task form label{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color:var(--purple);
+    font-size: var(--xlg);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.459);
+    margin-bottom: 1em;
+}
+.create-task form button{
+    width: fit-content;
+    color: white;
+    font-family: 'Poppins';
+    font-size: var(--xsm);
+    padding: .7em 1em;
+    border-radius: 1.5em;
+    transition: .3s;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.349);
+}
+.create-task form button{
+    background-color: #573ed3ad;
+    border: 1px solid var(--light-purple);
+}
+
+.create-task form button:hover{
+    background-color: var(--purple);
+    border: 1px solid #907deead;
+}
+.create-task img{
+    width: 98%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 2;
+}
+.input-form{
+    position: relative;
+}
+.input-form > input{
+    padding: 1em .5em;
+    background: rgba(255, 255, 255, 0.315);
+    border-radius: .5em;
+    box-shadow: 0 0px 3px rgb(255, 255, 255),
+                0 4px 30px rgba(0, 0, 0, 0.137);
+}
+.input-form > input{
+    color:var(--purple);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    border: none;
+    width: 100%;
+    font-size: var(--sm);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255);
+    margin-bottom: 1em;
+    outline: none;
+    transition: .5s ;
+}
+.input-form span,.input-form input:active ~ span{
+    position: absolute;
+    padding: 1em .5em;
+    top: 0;
+    left: 0;
+    color: var(--purple);
+    font-size: var(--sm);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: .3s;
+    border-radius: .3em;
+    
+}
+.input-form input:valid ~ span,
+.input-form input:focus ~ span{
+    transform: translate(5px, -1em);
+    padding: .3em .5em;
+    background-color: var(--purple);
+    color: white;
+    font-size: var(--xsm);
+    border-radius: .3em;
+}
+.input-form > input:valid,
+.input-form > input:focus{
+    background-color: rgba(255, 255, 255);
+}
+@media (max-width: 1250px) {
+    .create-task img{
+        display: none;
+    }
+}
+@media (max-width: 650px) {
+    .create-task form{
+        padding: 2em 1em;
+    }
+    .create-task form label{
+        font-size: var(--lg);
+    }
+}

@@ -1,0 +1,17 @@
+.todos-error {
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    font-size: var(--xxlg);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--danger-red);
+    text-shadow: 1px 1px 3px black;
+}
+
+
+@media (max-width: 650px) {
+    .todos-error {
+        font-size: var(--md);
+    }
+}

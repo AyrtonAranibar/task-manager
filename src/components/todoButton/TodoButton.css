@@ -1,0 +1,26 @@
+.search-button-container{
+    margin: auto;
+    width: fit-content;
+}
+.search-button-container button{
+    width: fit-content;
+    color: white;
+    font-family: 'Poppins';
+    font-size: var(--xsm);
+    padding: .7em 1em;
+    border-radius: 1.5em;
+    transition: .3s;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.349);
+}
+.search-button-container button{
+    background-color: var(--turquoise-transparent);
+    color:var(--dark-grey);
+    font-weight: bold;
+    border: 1px solid var(--light-turquoise);
+
+}
+.search-button-container button:hover{
+    background-color: var(--turquoise);
+    border: 1px solid var(--turquoise);
+    color: white;
+}
