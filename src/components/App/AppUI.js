@@ -3,14 +3,13 @@ import { TodoCounter } from '../todoCounter/TodoCounter';
 import { TodoSearch } from '../todoSearch/TodoSearch';
 import { TodoList } from '../todoList/TodoList';
 import { TodoItem } from '../todoItem/TodoItem';
-// import { Button } from '../todoButton/TodoButton';
 import { TodoNewItem } from '../todoNewItem/TodoNewItem';
 import { TodoTasksContainer } from '../todoTasksContainer/TodoTasksContainer';
 import { TodosError } from '../todosError/TodosError';
 import { TodosLoading } from '../todosLoading/TodosLoading';
 import { TodosEmpty } from '../todosEmpty/TodosEmpty';
 import { TodoContext } from '../todoContext/todoContext';
-
+import { Modal } from '../modal/modal';
 
 function AppUI(){
   const {
@@ -18,20 +17,17 @@ function AppUI(){
     error,
     searchedTodos,
     onCheck,
-    deleteTodo
+    deleteTodo,
+    openModal,
+    repeatedTask,
+    validValue
   } = React.useContext(TodoContext);
 
     return (
     <div className="App">
-      <TodoNewItem
-        // createTodo={createTodo}
-        // todos={todos}
-      />
+      <TodoNewItem/>
       <TodoTasksContainer>
-        <TodoSearch 
-        // searchValue={searchValue} 
-        // setSearchValue={setSearchValue} 
-        />
+        <TodoSearch/>
         <TodoList>
           {loading && <TodosLoading/>}
           {error && <TodosError/>}
@@ -46,10 +42,14 @@ function AppUI(){
             />
           ))}
         </TodoList>
-        <TodoCounter 
-          // total={totalTasks} 
-          // completed={completedTasks}
-        />
+        <TodoCounter/>
+        {openModal && (
+        <Modal>
+          <h2> ¡Advertencia!</h2>
+          {repeatedTask && <p> Tarea repetida</p>}
+          {validValue && <p> Coloca un valor válido</p>}
+        </Modal>)}
+        
       </TodoTasksContainer>
     </div>
   );

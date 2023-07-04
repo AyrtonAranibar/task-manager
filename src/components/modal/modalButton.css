@@ -1,0 +1,11 @@
+
+.modal-button{
+    outline: none;
+    border:none;
+    width: fit-content;
+    border-radius: .3em;
+    background-color: white;
+    color:black;
+    font-family: 'Poppins', sans-serif;
+    padding: .3em 1em;
+}

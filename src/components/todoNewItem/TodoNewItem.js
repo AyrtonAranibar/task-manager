@@ -5,21 +5,25 @@ import { TodoContext } from '../todoContext/todoContext';
 import React from 'react';
 
 function TodoNewItem( ){
-    const { createTodo, todos } = React.useContext(TodoContext);
+    const { loading, createTodo, todos, setOpenModal, setRepeatedTask, setValidValue } = React.useContext(TodoContext);
 
     function createTask(event){
         event.preventDefault();
-        const inputElement = document.getElementById('task');
-        const inputValue = inputElement.value;
-        if(inputValue){
-            if(todos.find(task => task.text === inputValue)){
-                alert('Esa tarea ya existe');
+        if(!loading){
+            const inputElement = document.getElementById('task');
+            const inputValue = inputElement.value;
+            if(inputValue){
+                if(todos.find(task => task.text === inputValue)){
+                    setRepeatedTask(true);
+                    setOpenModal(true);
+                }else{
+                    createTodo(inputValue);
+                    inputElement.value = "";
+                }
             }else{
-                createTodo(inputValue);
-                inputElement.value = "";
+                setValidValue(true);
+                setOpenModal(true);
             }
-        }else{
-            alert('Debes colocar un valor válido');
         }
     }
     return(

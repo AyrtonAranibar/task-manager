@@ -21,6 +21,9 @@ function TodoProvider( {children} ){
 
   const [totalTasks, setTotalTasks] = React.useState(0);
   const [completedTasks, setCompletedTasks] = React.useState(0);
+  const [openModal, setOpenModal] = React.useState(false);
+  const [repeatedTask, setRepeatedTask] = React.useState(false);
+  const [validValue, setValidValue] = React.useState(false);
 
 
   const searchedTodos = todos.filter((task) => {
@@ -66,13 +69,18 @@ function TodoProvider( {children} ){
             completedTasks,
             onCheck,
             deleteTodo,
+            openModal,
+            setOpenModal,
+            repeatedTask, 
+            setRepeatedTask,
+            validValue, 
+            setValidValue
         }}>
             {children}
         </TodoContext.Provider>
     );
 }
 
-{/* <TodoContext.Provider></TodoContext.Provider>
-<TodoContext.Consumer></TodoContext.Consumer> */}
+
 
 export { TodoContext, TodoProvider };
