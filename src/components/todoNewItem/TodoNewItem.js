@@ -6,6 +6,7 @@ import React from 'react';
 
 function TodoNewItem( ){
     const { loading, createTodo, todos, setOpenModal, setRepeatedTask, setValidValue } = React.useContext(TodoContext);
+    const newTaskInput = document.querySelector('.input-form input');
 
     function createTask(event){
         event.preventDefault();
@@ -26,6 +27,11 @@ function TodoNewItem( ){
             }
         }
     }
+
+    function selectInput(){
+        newTaskInput.focus();
+    }
+
     return(
         <div className="create-task">
             <form onSubmit={ createTask }>
@@ -33,7 +39,7 @@ function TodoNewItem( ){
                 </label>
                 <div className="input-form">
                     <input type="text" id="task" required></input>
-                    <span>Task name</span>
+                    <span onClick={ selectInput }>Task name</span>
                 </div>
                 <button type="button" onClick={ createTask }>Create Task</button>
             </form>

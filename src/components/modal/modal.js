@@ -15,7 +15,7 @@ function Modal( { children } ){
     return ReactDOM.createPortal(
         <div onClick={ closeModal } className="modal">
             <div className="modal-card">
-                <i class="fas fa-exclamation-triangle"></i>
+                <i className="fas fa-exclamation-triangle"></i>
                 {children}
             </div>
         </div>,
