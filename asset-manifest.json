@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/task-manager/build/static/css/main.3350b9bc.css",
+    "main.js": "/task-manager/build/static/js/main.059eb958.js",
+    "static/media/pinkgardend_v2.jpg": "/task-manager/build/static/media/pinkgardend_v2.825ee74a83171a5caccb.jpg",
+    "static/media/Poppins-Italic.ttf": "/task-manager/build/static/media/Poppins-Italic.2374f1ccc2fd51e10aee.ttf",
+    "static/media/Poppins-Thin.ttf": "/task-manager/build/static/media/Poppins-Thin.c0e3721e5939730f7cf2.ttf",
+    "static/media/Poppins-ExtraLight.ttf": "/task-manager/build/static/media/Poppins-ExtraLight.90da5cbbcdb0976dc884.ttf",
+    "static/media/Poppins-Light.ttf": "/task-manager/build/static/media/Poppins-Light.25b96349cf564e8ba0dc.ttf",
+    "static/media/Poppins-Regular.ttf": "/task-manager/build/static/media/Poppins-Regular.4211496d0e075ffe7c2f.ttf",
+    "static/media/Poppins-Medium.ttf": "/task-manager/build/static/media/Poppins-Medium.c5eb70982e90502d0d01.ttf",
+    "static/media/Poppins-SemiBold.ttf": "/task-manager/build/static/media/Poppins-SemiBold.090bd619384bb8d4c289.ttf",
+    "static/media/Poppins-Bold.ttf": "/task-manager/build/static/media/Poppins-Bold.300a4da54f1e6258b6f7.ttf",
+    "static/media/Poppins-ExtraBold.ttf": "/task-manager/build/static/media/Poppins-ExtraBold.c2cc929b28dbf8a30cfd.ttf",
+    "static/media/Poppins-Black.ttf": "/task-manager/build/static/media/Poppins-Black.c78fe16aec75b2fc38d0.ttf",
+    "index.html": "/task-manager/build/index.html",
+    "main.3350b9bc.css.map": "/task-manager/build/static/css/main.3350b9bc.css.map",
+    "main.059eb958.js.map": "/task-manager/build/static/js/main.059eb958.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3350b9bc.css",
+    "static/js/main.059eb958.js"
+  ]
+}
